@@ -22,9 +22,9 @@ fi
 
 # TexLive configuration
 if [ -d "$HOME/texlive" ] ; then
-    PATH=/home/yilin/texlive/bin/x86_64-linux:$PATH; export PATH
-    MANPATH=/home/yilin/texlive/texmf-dist/doc/man:$MANPATH; export MANPATH
-    INFOPATH=/home/yilin/texlive/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+    PATH="$HOME/texlive/bin/x86_64-linux:$PATH"; export PATH
+    MANPATH="$HOME/texlive/texmf-dist/doc/man:$MANPATH"; export MANPATH
+    INFOPATH="$HOME/texlive/texmf-dist/doc/info:$INFOPATH"; export INFOPATH
 fi
 
 
