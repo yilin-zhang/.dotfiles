@@ -1,0 +1,30 @@
+#                   _                
+#                  | |               
+#  ____  _   _  ___| |__   ____ ____ 
+# |    \| | | |/___)  _ \ / ___) ___)
+# | | | | |_| |___ | | | | |  ( (___ 
+# |_|_|_|\__  (___/|_| |_|_|   \____)
+#       (____/                       
+#
+# All my shell configuration scripts are stored here.
+# ASCII Fonts: Rounded
+
+# miniconda
+if [ -d "$HOME/miniconda3" ] ; then
+   . $HOME/miniconda3/etc/profile.d/conda.sh
+fi
+
+# personal shell-scripts
+if [ -d "$HOME/shell-scripts" ] ; then
+    export PATH="$HOME/shell-scripts:$PATH"
+fi
+
+# oh-my-zsh plugins
+# zsh-autosuggestions
+if [ -d "$HOME/.oh-my-zsh" ] ; then
+    export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0'
+fi
+
+# alias
+alias upgrade='sudo apt update; sudo apt upgrade'
+alias cpl2ctl='xmodmap ~/.Xmodmap'

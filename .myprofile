@@ -1,0 +1,30 @@
+#                                 ___ _ _        
+#                                / __|_) |       
+#  ____  _   _ ____   ____ ___ _| |__ _| | _____ 
+# |    \| | | |  _ \ / ___) _ (_   __) | || ___ |
+# | | | | |_| | |_| | |  | |_| || |  | | || ____|
+# |_|_|_|\__  |  __/|_|   \___/ |_|  |_|\_)_____)
+#       (____/|_|                                
+#
+# All my .profile configuration scripts are stored here.
+# ASCII Fonts: Rounded
+
+# local npm-global directory
+if [ -d "$HOME/.npm-global" ] ; then
+    export NPM_CONFIG_PREFIX="$HOME/.npm-global"
+    export PATH="$HOME/.npm-global/bin:$PATH"
+fi
+
+# Rust configuration
+if [ -d "$HOME/.cargo" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
+# TexLive configuration
+if [ -d "$HOME/texlive" ] ; then
+    PATH=/home/yilin/texlive/bin/x86_64-linux:$PATH; export PATH
+    MANPATH=/home/yilin/texlive/texmf-dist/doc/man:$MANPATH; export MANPATH
+    INFOPATH=/home/yilin/texlive/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+fi
+
+
