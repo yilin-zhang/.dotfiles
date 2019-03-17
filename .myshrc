@@ -10,13 +10,13 @@
 # ASCII Fonts: Rounded
 
 # miniconda
-if [ -d "$HOME/miniconda3" ] ; then
+if [ -s "$HOME/miniconda3/etc/profile.d/conda.sh" ] ; then
    . $HOME/miniconda3/etc/profile.d/conda.sh
 fi
 
-# personal shell-scripts
-if [ -d "$HOME/shell-scripts" ] ; then
-    export PATH="$HOME/shell-scripts:$PATH"
+# Load RVM into a shell session *as a function*
+if [ -s "$HOME/.rvm/scripts/rvm" ] ; then
+    source "$HOME/.rvm/scripts/rvm"
 fi
 
 # oh-my-zsh plugins

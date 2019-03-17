@@ -101,3 +101,4 @@ source $ZSH/oh-my-zsh.sh
 
 # --------------------- CUSTOM ------------------------
 source ~/.myshrc
+

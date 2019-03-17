@@ -20,6 +20,12 @@ if [ -d "$HOME/.cargo" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# Ruby configuration
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+if [ -d "$HOME/.rvm/bin" ] ; then
+    export PATH="$PATH:$HOME/.rvm/bin"
+fi
+
 # TexLive configuration
 if [ -d "$HOME/texlive" ] ; then
     PATH="$HOME/texlive/bin/x86_64-linux:$PATH"; export PATH
@@ -27,4 +33,8 @@ if [ -d "$HOME/texlive" ] ; then
     INFOPATH="$HOME/texlive/texmf-dist/doc/info:$INFOPATH"; export INFOPATH
 fi
 
+# MATLAB configuration
+if [ -d "$HOME/MATLAB/R2018b" ] ; then
+    PATH="$HOME/MATLAB/R2018b/bin:$PATH"; export PATH
+fi
 
