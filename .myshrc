@@ -28,3 +28,4 @@ fi
 # alias
 alias upgrade='sudo apt update; sudo apt upgrade'
 alias cpl2ctl='xmodmap ~/.Xmodmap'
+alias trash='gio trash'
