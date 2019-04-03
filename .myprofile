@@ -20,6 +20,14 @@ if [ -d "$HOME/.cargo" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# Go configuration
+if [ -d "$HOME/.go" ] ; then
+   export GOROOT="$HOME/.go"
+   export GOPATH="$HOME/.gopkg"
+   export PATH="$GOROOT/bin:$PATH"
+   export PATH="$GOPATH/bin:$PATH"
+fi
+
 # TexLive configuration
 if [ -d "$HOME/texlive" ] ; then
     PATH="$HOME/texlive/bin/x86_64-linux:$PATH"; export PATH
