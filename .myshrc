@@ -9,21 +9,26 @@
 # All my shell configuration scripts are stored here.
 # ASCII Fonts: Rounded
 
+# my bin directory
+if [ -d "$HOME/bin" ] ; then
+   PATH="$HOME/bin:$PATH"
+fi
+
 # miniconda
 if [ -s "$HOME/miniconda3/etc/profile.d/conda.sh" ] ; then
-    . $HOME/miniconda3/etc/profile.d/conda.sh
+   . $HOME/miniconda3/etc/profile.d/conda.sh
 fi
 
 # rbenv
 if [ -d "$HOME/.rbenv/bin" ] ; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
+   PATH="$HOME/.rbenv/bin:$PATH"
+   eval "$(rbenv init -)"
 fi
 
 # oh-my-zsh plugins
 # zsh-autosuggestions
 if [ -d "$HOME/.oh-my-zsh" ] ; then
-    export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0'
+   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 fi
 
 # alias
