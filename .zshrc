@@ -100,5 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # --------------------- CUSTOM ------------------------
-source ~/.myshrc
 
+# oh-my-zsh plugins
+# zsh-autosuggestions
+if [ -d "$HOME/.oh-my-zsh" ] ; then
+    export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+fi
+
+source ~/.myshrc

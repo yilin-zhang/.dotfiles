@@ -14,38 +14,23 @@ if [ -d "$HOME/bin" ] ; then
    PATH="$HOME/bin:$PATH"
 fi
 
-# miniconda
-if [ -s "$HOME/miniconda3/etc/profile.d/conda.sh" ] ; then
-   . $HOME/miniconda3/etc/profile.d/conda.sh
-fi
+## Choose whether use fish or not
+use_fish=true
 
-# rbenv
-if [ -d "$HOME/.rbenv/bin" ] ; then
-   PATH="$HOME/.rbenv/bin:$PATH"
-   eval "$(rbenv init -)"
-fi
+## Bash specific settings
+if [ "$use_fish"=true ] ; then
+    # Use fish as interactive shell
+    exec fish
+else
+    # bash/zsh specific settings
+    # miniconda
+    if [ -s "$HOME/miniconda3/etc/profile.d/conda.sh" ] ; then
+        . $HOME/miniconda3/etc/profile.d/conda.sh
+    fi
 
-# oh-my-zsh plugins
-# zsh-autosuggestions
-if [ -d "$HOME/.oh-my-zsh" ] ; then
-   export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+    # rbenv
+    if [ -d "$HOME/.rbenv/bin" ] ; then
+        PATH="$HOME/.rbenv/bin:$PATH"
+        eval "$(rbenv init -)"
+    fi
 fi
-
-# fzf settings
-if [ -d "/usr/share/fzf" ] ; then
-   if [ $SHELL = "/usr/bin/zsh" ] ; then
-      . /usr/share/fzf/key-bindings.zsh
-      . /usr/share/fzf/completion.zsh
-   fi
-   if [ $SHELL = "/usr/bin/bash" ] ; then
-      . /usr/share/fzf/key-bindings.bash
-      . /usr/share/fzf/completion.bash
-   fi
-fi
-
-# alias
-alias cpl2ctl='xmodmap ~/.Xmodmap'
-alias trash='gio trash'
-alias ec='emacsclient -c'
-alias ecf='ec `fzf`'
-alias pkgf='pacman -Q | fzf'

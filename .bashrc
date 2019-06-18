@@ -1,0 +1,2 @@
+## source .myshrc
+source ~/.myshrc
