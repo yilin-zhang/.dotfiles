@@ -10,9 +10,9 @@ SETUVAR _fish_abbr_l:less
 SETUVAR _fish_abbr_pkgf:pacman\x20\x2dQ\x20\x7c\x20fzf
 SETUVAR _fish_abbr_rmop:sudo\x20pacman\x20\x2dRsn\x20\x28pacman\x20\x2dQdtq\x29
 SETUVAR _fish_abbr_rmpkg:sudo\x20pacman\x20\x2dRsn
-SETUVAR _fish_abbr_spkg:sudo\x20pacman\x20\x2dSs
+SETUVAR _fish_abbr_spkg:yay\x20\x2dSs
 SETUVAR _fish_abbr_trash:gio\x20trash
-SETUVAR _fish_abbr_upd:sudo\x20pacman\x20\x2dSyu
+SETUVAR _fish_abbr_upd:sudo\x20pacmatic\x20\x2dSyu
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:c397d8

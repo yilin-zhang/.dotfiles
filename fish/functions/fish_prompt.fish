@@ -1,5 +1,5 @@
 function fish_prompt --description 'Write out the prompt'
-	set -l last_status $status
+	set -g last_status $status
 
     # User
     set_color yellow --bold
