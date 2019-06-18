@@ -6,10 +6,10 @@ abbr trash gio trash
 abbr ec emacsclient -c
 abbr ecf "emacsclient -c (fzf)"
 # pacman
-abbr upd "sudo pacman -Syu" # update
+abbr upd "sudo pacmatic -Syu" # update
 abbr ipkg "sudo pacman -S" # install package
 abbr rmpkg "sudo pacman -Rsn" # remove package
-abbr spkg "sudo pacman -Ss" # search package
+abbr spkg "yay -Ss" # search package
 abbr rmop "sudo pacman -Rsn (pacman -Qdtq)" # remove orphans
 abbr fpkg "pacman -Q | fzf" # find installed package
 
