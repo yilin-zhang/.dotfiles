@@ -1,0 +1,35 @@
+#!/bin/fish
+
+function linkfile -a filepath linkdir
+    set -l filename (basename $filepath)
+    set -l linkpath $linkdir/$filename
+    if test -f $linkpath; or test -d $linkpath
+       mv $linkpath $linkpath.bak
+    end
+    ln -s $filepath $linkpath
+end
+
+set -l current_dir (dirname (readlink -e (status --current-filename)))
+
+set -l Xmodmap $current_dir/.Xmodmap
+linkfile $Xmodmap ~
+
+set -l xprofile $current_dir/.xprofile
+linkfile $xprofile ~
+
+echo "source ~/.myprofile" >> ~/.profile
+
+set -l myprofile $current_dir/.myprofile
+linkfile $myprofile ~
+
+set -l bashrc $current_dir/.bashrc
+linkfile $bashrc ~
+
+set -l zshrc $current_dir/.zshrc
+linkfile $zshrc ~
+
+set -l myshrc $current_dir/.myshrc
+linkfile $myshrc ~
+
+set -l fish $current_dir/fish
+linkfile $fish ~/.config
