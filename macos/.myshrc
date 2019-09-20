@@ -1,0 +1,36 @@
+#                   _                
+#                  | |               
+#  ____  _   _  ___| |__   ____ ____ 
+# |    \| | | |/___)  _ \ / ___) ___)
+# | | | | |_| |___ | | | | |  ( (___ 
+# |_|_|_|\__  (___/|_| |_|_|   \____)
+#       (____/                       
+#
+# All my shell configuration scripts are stored here.
+# ASCII Fonts: Rounded
+
+# my bin directory
+if [ -d "$HOME/bin" ] ; then
+   PATH="$HOME/bin:$PATH"
+fi
+
+## Choose whether use fish or not
+use_fish=true
+
+## Bash specific settings
+if [ "$use_fish"=true ] ; then
+    # Use fish as interactive shell
+    exec fish
+else
+    # bash/zsh specific settings
+    # miniconda
+    if [ -s "$HOME/miniconda3/etc/profile.d/conda.sh" ] ; then
+        . $HOME/miniconda3/etc/profile.d/conda.sh
+    fi
+
+    # rbenv
+    if [ -d "$HOME/.rbenv/bin" ] ; then
+        PATH="$HOME/.rbenv/bin:$PATH"
+        eval "$(rbenv init -)"
+    fi
+fi

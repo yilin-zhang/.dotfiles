@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_init_2_3_0:\x1d
-SETUVAR _fish_abbr_cpl2ctl:xmodmap\x20/home/yilin/\x2eXmodmap
+SETUVAR _fish_abbr_cpl2ctl:xmodmap\x20/Users/yilin/\x2eXmodmap
 SETUVAR _fish_abbr_ec:emacsclient\x20\x2dc
 SETUVAR _fish_abbr_ecf:emacsclient\x20\x2dc\x20\x28fzf\x29
 SETUVAR _fish_abbr_fpkg:pacman\x20\x2dQ\x20\x7c\x20fzf
